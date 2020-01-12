@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <h1>Password Generator</h1>
+        <p>Need a password? Use the generator below to make one!</p>
+      </div>
+    </div>
+    <form>
+      <div class="row">
+        <div class="col s12 m4 l4">
+          <div class="card">
+            <h2 class="panel-title">Step 2</h2>
+            <div class="row">
+              <div class="col s6 m6 l6">
+                <label>
+                  <input type="checkbox" class="filled-in" value="Special" id="specialChar" />
+                  <span>Special</span>
+                </label>
+              </div>
+              <div class="col s6 m6 l6">
+                <label>
+                  <input type="checkbox" class="filled-in" value="Numeric" id="numericChar" />
+                  <span>Numeric</span>
+                </label>
+              </div>
+              <div class="col s6 m6 l6">
+                <label>
+                  <input type="checkbox" class="filled-in" value="Lowercase" id="lowercaseChar" />
+                  <span>Lowercase</span>
+                </label>
+              </div>
+              <div class="col s6 m6 l6">
+                <label>
+                  <input type="checkbox" class="filled-in" value="Uppercase" id="uppercaseChar" />
+                  <span>Uppercase</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4 l4">
+          <div class="card">
+            <h2 class="panel-title">Step 3</h2>
+            <p>Length (must be between 8 and 128 characters):</p>
+            <p class="range-field">
+              <input type="range" name="characters" id="passwordLength" min="8" max="128" />
+            </p>
+          </div>
+        </div>
+        <div class="col s12 m12 l12">
+          <input type="button" value="Generate Password!" onclick="password()" class="waves-effect waves-light btn" />
+        </div>
+      </div>
+    </form>
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <div class="card">
+          <h2 class="panel-title">Your Password!</h2>
+          <p id="completedPassword">Nothing to see here yet!</p>
+        </div>
+      </div>
+      <div class="col s12 m12 l12">
+          <input type="button" value="Copy Password!" class="waves-effect waves-light btn" onclick="copyPassword()"/>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

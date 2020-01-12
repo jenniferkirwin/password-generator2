@@ -1,0 +1,8 @@
+{"liveSassCompile.settings.formats":[
+    // This is Default.
+    {
+        "format": "expanded",
+        "extensionName": ".css",
+        // "savePath": "/password-generator/css/"
+    }
+]}

@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-  <title>Starter Template - Materialize</title>
+  <title>My Password Generator</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,7 +14,7 @@
 
 <body>
   <div class="container">
-    <div class="row">
+    <div class="row center-align">
       <div class="col s12 m12 l12">
         <h1>Password Generator</h1>
         <p>Need a password? Use the generator below to make one!</p>
@@ -24,32 +24,32 @@
     <!-- Password Gen UI -->
     <div class="row">
       <form>
-        <div class="col s12 m12 l6">
+        <div class="col s12 m12 l5">
           <div class="card">
-            <h2 class="panel-title">Step 1: Pick Characters (Atleast 1)</h2>
+            <h2 class="panel-title">Step 1: Pick 1+ Character Type</h2>
             <div class="inner">
               <div class="row">
-                <div class="col s6 m6 l3">
+                <div class="col s6 m6 l6">
                   <label>
-                    <input type="checkbox" class="filled-in" value="Special" id="specialChar" />
+                    <input type="checkbox" class="filled-in my-checkbox" value="Special" id="specialChar" />
                     <span>Special</span>
                   </label>
                 </div>
-                <div class="col s6 m6 l3">
+                <div class="col s6 m6 l6">
                   <label>
-                    <input type="checkbox" class="filled-in" value="Numeric" id="numericChar" />
+                    <input type="checkbox" class="filled-in my-checkbox" value="Numeric" id="numericChar" />
                     <span>Numeric</span>
                   </label>
                 </div>
-                <div class="col s6 m6 l3">
+                <div class="col s6 m6 l6">
                   <label>
-                    <input type="checkbox" class="filled-in" value="Lowercase" id="lowercaseChar" />
+                    <input type="checkbox" class="filled-in my-checkbox" value="Lowercase" id="lowercaseChar" />
                     <span>Lowercase</span>
                   </label>
                 </div>
-                <div class="col s6 m6 l3">
+                <div class="col s6 m6 l6">
                   <label>
-                    <input type="checkbox" class="filled-in" value="Uppercase" id="uppercaseChar" />
+                    <input type="checkbox" class="filled-in my-checkbox" value="Uppercase" id="uppercaseChar" />
                     <span>Uppercase</span>
                   </label>
                 </div>
@@ -57,9 +57,9 @@
             </div>
           </div>
         </div>
-        <div class="col s12 m12 l3">
+        <div class="col s12 m12 l4">
           <div class="card">
-            <h2 class="panel-title">Step 2: Pick Length (8 - 128 Characters)</h2>
+            <h2 class="panel-title">Step 2: Pick 8 - 128 Characters</h2>
             <div class="inner">
               <p class="range-field">
                 <input type="range" name="characters" id="passwordLength" min="8" max="128" />
@@ -69,9 +69,9 @@
         </div>
         <div class="col s12 m12 l3">
           <div class="card">
-            <h2 class="panel-title">Step 3: Generate!</h2>
-            <div class="inner">
-              <button type="button" onclick="password()" class="waves-effect waves-light btn-large">Generate!</button>
+            <h2 class="panel-title">Step 3: Generate</h2>
+            <div class="inner center-align">
+              <button type="button" onclick="password()" class="btn-large mycolor">Generate!</button>
             </div>
           </div>
         </div>
@@ -81,12 +81,12 @@
     <!-- Display Password -->
     <div class="row">
       <div class="col s12 m12 l12">
-        <div class="card">
-          <h2 class="panel-title paneltitlegray passwordpanel">Your Password!</h2>
+        <div class="card center-align">
+          <h2 class="panel-title paneltitlegray passwordpanel">Your Password</h2>
           <div class="inner">
             <p id="completedPassword">Nothing to see here yet!</p>
             <button type="button" onclick="copyPassword()"
-              class="waves-effect waves-light btn-large disabled copyBtn">Copy Password!</button>
+              class="waves-effect waves-light btn-large disabled copyBtn mycolor">Copy Password!</button>
           </div>
         </div>
       </div>

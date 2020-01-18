@@ -1,31 +1,13 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
-
-$primary-color: #119DA4; 
-$secondary-color: #80DED9;
+$primary-color: #6A00FF; 
+$secondary-color: #C04CFD;
+$grey: #545454;
 $light-color: #ffffff;
 $default-padding: 15px;
-
- .icon-block {
-    padding: 0 15px;
-  }
-  .icon-block .material-icons {
-      font-size: inherit;
-  }
 
   body {
     /* Background pattern from Toptal Subtle Patterns */
     background-image: url("../images/funky-lines.png");
     height: 100%;
-}
-
-div.container {
-    background-color: $light-color;
 }
 
 h2.panel-title {
@@ -38,10 +20,46 @@ h2.panel-title {
 }
 
 div.inner {
-    padding: $default-padding;
+    padding: 0 $default-padding $default-padding $default-padding;
     word-wrap: break-word;
 }
 
 h2.paneltitlegray {
-    background-color: #000000;
+    background-color: $grey;
+}
+
+.card {
+    min-height: 150px;
+}
+
+button.mycolor {
+    background-color: $primary-color;
+    &:hover, &:active, &:focus {
+        background-color:lighten($primary-color, 20%);  
+    }
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background-color: $primary-color;
+}
+  
+input[type=range]::-moz-range-thumb {
+    background-color: $primary-color;
+}
+  
+input[type=range]::-ms-thumb {
+    background-color: $primary-color;
+}
+
+  input[type=range] + .thumb {
+    background-color: lighten($grey, 40%);  
+}
+
+input[type=range] + .thumb.active .value {
+    color: $light-color;
+}
+
+.my-checkbox[type="checkbox"].filled-in:checked + span:not(.lever):after {
+    border: 2px solid $primary-color;
+    background-color: $primary-color;
 }

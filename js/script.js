@@ -4,7 +4,7 @@ function password() {
   // Starting variables and characters to generate password
   let checkedBoxes = document.querySelectorAll(`input[type="checkbox"]:checked`).length;
   let passwordLength = document.getElementById('passwordLength').value;
-  let specialChar = "!\"#$%&\'()*+,-./:;<=>?@[\]^_\`{|}~";
+  let specialChar = "!#$%&()*+,-./:;<=>?@[^_{|}~";
   let numericChar = "1234567890";
   let lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
   let uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -50,9 +50,9 @@ function password() {
   // show password to user
 
   function passShow() {
-    document.querySelector(`.paneltitlegray`).classList.remove(`paneltitlegray`);
+    document.querySelector(`.passwordpanel`).classList.remove(`paneltitlegray`);
     document.querySelector(`.copyBtn`).classList.remove(`disabled`);
-    passDiv.innerHTML = `${basePassword.join("")}`;
+    passDiv.textContent = `${basePassword.join("")}`;
   };
 
   // Input Validation & Generate Complete Password
@@ -77,7 +77,7 @@ function password() {
 // copy password to clipboard
 
 function copyPassword() {
-  let passPhraseOrg = document.getElementById('completedPassword').innerHTML;
+  let passPhraseOrg = document.getElementById('completedPassword').textContent;
   let placeHolder = document.createElement(`textarea`);
   document.body.appendChild(placeHolder);
   placeHolder.value = passPhraseOrg;

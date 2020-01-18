@@ -21,8 +21,9 @@
       </div>
     </div>
 
-      <div class="row">
-        <form>
+    <!-- Password Gen UI -->
+    <div class="row">
+      <form>
         <div class="col s12 m12 l6">
           <div class="card">
             <h2 class="panel-title">Step 1: Pick Characters (Atleast 1)</h2>
@@ -54,31 +55,43 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l3">
+          <div class="card">
             <h2 class="panel-title">Step 2: Pick Length (8 - 128 Characters)</h2>
             <div class="inner">
               <p class="range-field">
                 <input type="range" name="characters" id="passwordLength" min="8" max="128" />
               </p>
             </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l3">
+          <div class="card">
             <h2 class="panel-title">Step 3: Generate!</h2>
             <div class="inner">
-              <!-- <input type="button" value="Generate!" onclick="password()"
-                class="waves-effect waves-light btn" /> -->
-                <button type="button" onclick="password()" class="waves-effect waves-light btn-large">Generate!</button>
+              <button type="button" onclick="password()" class="waves-effect waves-light btn-large">Generate!</button>
             </div>
           </div>
         </div>
       </form>
-      <div class="col s12 m12 l6">
+    </div>
+
+    <!-- Display Password -->
+    <div class="row">
+      <div class="col s12 m12 l12">
         <div class="card">
-          <h2 class="panel-title paneltitlegray">Your Password!</h2>
+          <h2 class="panel-title paneltitlegray passwordpanel">Your Password!</h2>
           <div class="inner">
             <p id="completedPassword">Nothing to see here yet!</p>
-            <button type="button" onclick="copyPassword()" class="waves-effect waves-light btn-large disabled copyBtn">Copy Password!</button>
-          </div>          
+            <button type="button" onclick="copyPassword()"
+              class="waves-effect waves-light btn-large disabled copyBtn">Copy Password!</button>
+          </div>
         </div>
       </div>
     </div>
+
     <!-- Modal for Error -->
     <div id="modal1" class="modal">
       <div class="modal-content">

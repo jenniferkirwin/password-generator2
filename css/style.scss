@@ -8,6 +8,8 @@
 
 $primary-color: #119DA4; 
 $secondary-color: #80DED9;
+$light-color: #ffffff;
+$default-padding: 15px;
 
  .icon-block {
     padding: 0 15px;
@@ -22,15 +24,24 @@ $secondary-color: #80DED9;
     height: 100%;
 }
 
-.container {
-    background-color: #ffffff;
+div.container {
+    background-color: $light-color;
 }
 
-.panel-title {
+h2.panel-title {
     display: block;
     padding: 15px;
     font-size: 16px;
     background-color: $primary-color;
-    color: #ffffff;
+    color: $light-color;
+    font-weight: bold;
 }
 
+div.inner {
+    padding: $default-padding;
+    word-wrap: break-word;
+}
+
+h2.paneltitlegray {
+    background-color: #000000;
+}

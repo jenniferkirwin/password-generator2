@@ -8,6 +8,8 @@ function password() {
   let uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let additionalChar = "";
   let basePassword = [];
+  let passDiv = document.getElementById("completedPassword");
+
 
   // Password Character Selector
 
@@ -19,7 +21,7 @@ function password() {
   };
 
   // add to array until length = password length
-  function passComleter(){
+  function passComleter() {
     for (i = basePassword.length; i < passwordLength; i++) {
       basePassword.push(additionalChar[Math.floor(Math.random() * additionalChar.length)]);
     };
@@ -45,13 +47,18 @@ function password() {
 
   // show password to user
 
+  function passShow() {
+    document.getElementById(`test`).classList.remove(`paneltitlegray`);
+    document.getElementById(`copyBtn`).classList.remove(`disabled`);
+    passDiv.innerHTML = `${basePassword.join("")}`;
+  };
+
   // Input Validation & Generate Complete Password
 
   if (checkedBoxes < 1) {
-    alert(`Please select alteast one Character Type`)
-    // const elem = document.getElementById('modal id here');
-    // const instance = M.Modal.init(elem, {dismissible: false});
-    // instance.open();
+    let elem= document.querySelector('.modal');
+    let instance = M.Modal.init(elem);
+    instance.open();
   }
 
   else {
@@ -61,16 +68,13 @@ function password() {
     passChar(specialChar, "specialChar");
     passComleter();
     passShuffe(basePassword);
-    document.getElementById("completedPassword").innerHTML = `${basePassword.join("")}`;
-    
-  
-    console.log(basePassword.join(""));
-    console.log(basePassword.join("").length);
+    passShow();    
   };
 };
+
+// copy password to clipboard
 
 function copyPassword(){
   let passPhraseOrg = document.getElementById('passwordPhrase').value;
   document.execCommand('copy');
 };
-

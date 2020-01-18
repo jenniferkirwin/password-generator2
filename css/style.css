@@ -19,15 +19,25 @@ body {
   height: 100%;
 }
 
-.container {
+div.container {
   background-color: #ffffff;
 }
 
-.panel-title {
+h2.panel-title {
   display: block;
   padding: 15px;
   font-size: 16px;
   background-color: #119DA4;
   color: #ffffff;
+  font-weight: bold;
+}
+
+div.inner {
+  padding: 15px;
+  word-wrap: break-word;
+}
+
+h2.paneltitlegray {
+  background-color: #000000;
 }
 /*# sourceMappingURL=style.css.map */

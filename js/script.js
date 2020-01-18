@@ -48,8 +48,8 @@ function password() {
   // show password to user
 
   function passShow() {
-    document.getElementById(`test`).classList.remove(`paneltitlegray`);
-    document.getElementById(`copyBtn`).classList.remove(`disabled`);
+    document.querySelector(`.paneltitlegray`).classList.remove(`paneltitlegray`);
+    document.querySelector(`.copyBtn`).classList.remove(`disabled`);
     passDiv.innerHTML = `${basePassword.join("")}`;
   };
 
@@ -74,7 +74,12 @@ function password() {
 
 // copy password to clipboard
 
-function copyPassword(){
-  let passPhraseOrg = document.getElementById('passwordPhrase').value;
-  document.execCommand('copy');
+function copyPassword() {
+  let passPhraseOrg = document.getElementById('completedPassword').innerHTML;
+  let placeHolder = document.createElement(`textarea`);
+  document.body.appendChild(placeHolder);
+  placeHolder.value = passPhraseOrg;
+  placeHolder.select();
+  document.execCommand(`copy`);
+  document.body.removeChild(placeHolder);
 };

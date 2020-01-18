@@ -1,3 +1,5 @@
+// Think about adding "password strength" at a later date
+
 function password() {
   // Starting variables and characters to generate password
   let checkedBoxes = document.querySelectorAll(`input[type="checkbox"]:checked`).length;
@@ -26,23 +28,23 @@ function password() {
       basePassword.push(additionalChar[Math.floor(Math.random() * additionalChar.length)]);
     };
   };
-  
+
   // randomize/shuffle basePassword array
 
   function passShuffe(array) {
 
-      let currentIndex = array.length;
-      let temporaryValue, randomIndex;
+    let currentIndex = array.length;
+    let temporaryValue, randomIndex;
 
-      while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex --;
+    while (0 !== currentIndex) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
 
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
-      }
-      return array;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
   };
 
   // show password to user
@@ -56,7 +58,7 @@ function password() {
   // Input Validation & Generate Complete Password
 
   if (checkedBoxes < 1) {
-    let elem= document.querySelector('.modal');
+    let elem = document.querySelector('.modal');
     let instance = M.Modal.init(elem);
     instance.open();
   }
@@ -68,7 +70,7 @@ function password() {
     passChar(specialChar, "specialChar");
     passComleter();
     passShuffe(basePassword);
-    passShow();    
+    passShow();
   };
 };
 
